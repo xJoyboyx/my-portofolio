@@ -1,0 +1,53 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: -webkit-fill-available;  // Para Safari
+  padding: 40px;
+  background-color: #F4F4F4;
+  width: 100%;  // Asegura que ocupe todo el ancho
+}
+
+
+
+
+.content-container {
+  margin-left: 20px;  // Espacio a la izquierda para alinear con el logo
+  text-align: left;  // Alinear el texto a la izquierda
+  margin-bottom: 4rem;
+  h1 {
+    font-size: 4rem;  // Ajustar el tamaño de fuente para que sea más grande
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 20px 0;
+  }
+  p {
+    font-size: 1.3rem;  // Ajustar el tamaño de la fuente para los párrafos
+    margin: 10px 0;
+    
+  }
+}
+
+.button-container {
+  align-self: flex-start;
+  padding-top: 50px;  // Añadir espacio superior para separar el botón del texto
+  margin-left: 20px;
+  }
+
+  @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);  // Inicia ligeramente desplazado hacia abajo
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);  // Finaliza en su posición original
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1.5s ease-out;  // Controla la duración y el tipo de animación
+  opacity: 0;  // Inicialmente invisible
+  animation-fill-mode: forwards;  // Mantiene el estado final de la animación
+}

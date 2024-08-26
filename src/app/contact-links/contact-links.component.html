@@ -1,0 +1,12 @@
+<div class="contact-links-container">
+  <h2>&lt;Get&gt; in touch. <span class="divider"></span></h2>
+
+  <div class="list-wrapper">
+    <ul>
+    <li *ngFor="let contact of contactLinks">
+      <img [src]="contact.icon" alt="{{ contact.label }} icon" />
+      <a [href]="contact.link" target="_blank" rel="noopener noreferrer">{{ contact.label }}. ---------{{ contact.link }}</a>
+    </li>
+  </ul>
+  </div>
+</div>
