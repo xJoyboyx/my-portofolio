@@ -1,8 +1,13 @@
 <div class="popup-overlay" *ngIf="project">
   <div class="popup-container">
-    <!-- Imagen principal -->
-    <div class="main-image-container" [ngClass]="{'dark-item': project.dark}">
-      <img [src]="project.image" alt="Main Project Image" class="main-image">
+    <!-- Imagen principal y el ícono -->
+    <div class="image-link-container">
+      <div class="main-image-container" [ngClass]="{'dark-item': project.dark}">
+        <img [src]="project.image" alt="Main Project Image" class="main-image">
+      </div>
+      <a *ngIf="project.url" [href]="project.url" target="_blank" class="external-link">
+        <img src="icons/link.png" alt="External Link" class="external-icon">
+      </a>
     </div>
 
     <!-- Contenedor de la descripción y el stack -->

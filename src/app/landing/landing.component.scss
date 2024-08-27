@@ -6,7 +6,7 @@
   height: -webkit-fill-available;  // Para Safari
   padding: 40px;
   background-color: #F4F4F4;
-  width: 100%;  // Asegura que ocupe todo el ancho
+ // Asegura que ocupe todo el ancho
 }
 
 
@@ -17,13 +17,13 @@
   text-align: left;  // Alinear el texto a la izquierda
   margin-bottom: 4rem;
   h1 {
-    font-size: 4rem;  // Ajustar el tamaño de fuente para que sea más grande
+    font-size: 5rem;  // Ajustar el tamaño de fuente para que sea más grande
     font-weight: bold;
     line-height: 1.2;
     margin: 20px 0;
   }
   p {
-    font-size: 1.3rem;  // Ajustar el tamaño de la fuente para los párrafos
+    font-size: 2rem;  // Ajustar el tamaño de la fuente para los párrafos
     margin: 10px 0;
     
   }
@@ -47,7 +47,7 @@
 }
 
 .fade-in-up {
-  animation: fadeInUp 1.5s ease-out;  // Controla la duración y el tipo de animación
+  animation: fadeInUp 2s ease-out;  // Controla la duración y el tipo de animación
   opacity: 0;  // Inicialmente invisible
   animation-fill-mode: forwards;  // Mantiene el estado final de la animación
 }

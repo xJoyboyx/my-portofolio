@@ -46,6 +46,33 @@
     color: #fff;
   }
 }
+.image-link-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px; // Espacio entre la imagen y el ícono
+
+  .external-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; // Redondea el ícono
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #007bff; // Cambia de color al pasar el ratón
+      img {
+        filter: brightness(0) invert(1); // Cambia el color del ícono al pasar el ratón
+      }
+    }
+  }
+
+  .external-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
 
 .details-container {
   display: flex;

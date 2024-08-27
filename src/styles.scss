@@ -114,3 +114,20 @@ p {
     object-fit: contain;
   }
 }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);  // Inicia ligeramente desplazado hacia abajo
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);  // Finaliza en su posición original
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 2s ease-out;  // Controla la duración y el tipo de animación
+  opacity: 0;  // Inicialmente invisible
+  animation-fill-mode: forwards;  // Mantiene el estado final de la animación
+}

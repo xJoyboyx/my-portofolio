@@ -2,19 +2,23 @@
   padding: 20px;
   background-color: #F4F4F4; 
   height: -webkit-fill-available;  // Para Safari
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   h2 {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-    margin-top: 4rem;
-    position: relative;
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
     .divider {
-          flex-grow: 1;
-          margin-left: 10px;
-          border-top: 1px solid #333;
-        }
+      flex: 1;
+      height: 1px;
+      background-color: #000000; // Color del divisor
+      margin-left: 10px; // Espacio entre el texto y el divisor
+    }
   }
 
   .showcase-items {
