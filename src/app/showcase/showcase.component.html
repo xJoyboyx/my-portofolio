@@ -6,19 +6,20 @@
     </div>
   </div>
   
-  <h2>Jobs Showcase. </h2>
+  <h2>Jobs Showcase.</h2>
   <div class="showcase-items">
     <div *ngFor="let item of jobs" class="showcase-item" (click)="openPopup(item)">
       <img [src]="item.image" alt="{{ item.name }} logo" class="showcase-logo" />
     </div>
   </div>
   
-  <h2>Projects Showcase. </h2>
+  <h2>Projects Showcase.</h2>
   <div class="showcase-items">
     <div *ngFor="let item of projects" class="showcase-item" (click)="openPopup(item)">
       <img [src]="item.image" alt="{{ item.name }} logo" class="showcase-logo" />
     </div>
   </div>
-</div>
 
-<app-project-popup *ngIf="selectedProject" [selectedProject]="selectedProject" (close)="closePopup()"></app-project-popup>
+  <!-- Popup component -->
+  <app-project-popup *ngIf="selectedProject" [project]="selectedProject" (close)="closePopup()"></app-project-popup>
+</div>

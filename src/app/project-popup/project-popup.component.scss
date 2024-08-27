@@ -1,0 +1,121 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); // Fondo oscuro semitransparente
+  backdrop-filter: blur(10px); // Desenfoque del fondo
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  padding: 20px;
+  max-width: 100%;
+  padding-left: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px; // Espacio entre los elementos
+}
+
+.main-image-container {
+  display: flex;
+  width: 150px;
+  height: 130px;
+  background-color: #f6f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  .main-image {
+    width: 90px;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &.dark-item {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+.details-container {
+  display: flex;
+  gap: 20px;
+
+  .description, .stack {
+    flex: 1;
+  }
+
+  h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+
+  .stack-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .pill {
+        font-size: 1.2rem;
+
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.portfolio-images-container {
+  overflow-x: scroll;
+  display: flex;
+  justify-content: center;
+
+  .portfolio-images {
+    display: flex;
+    gap: 10px;
+
+    img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: center;
+
+  .close-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.4rem;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
