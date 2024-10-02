@@ -15,12 +15,65 @@
 .popup-container {
   padding: 20px;
   max-width: 100%;
-  padding-left: 5rem;
-  width: 100%;
+  width: 90%;
+  max-height: 90vh; /* Limita la altura en móviles */
+  overflow-y: auto; /* Permitir el scroll vertical */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px; // Espacio entre los elementos
+  border-radius: 10px;
+  color: #ffffff; /* Todo el texto dentro del popup será blanco */
+
+  @media (max-width: 768px) {
+    width: 95%; /* Más ancho en móviles pequeños */
+  }
+}
+.image-link-container {
+  display: flex;
+  margin-top: 2rem;
+  align-items: flex-end;
+  gap: 10px; /* Espacio entre la imagen y el ícono */
+
+  .external-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Redondea el ícono */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: #007bff; /* Cambia de color al pasar el ratón */
+      img {
+        filter: brightness(0) invert(1); /* Cambia el color del ícono al pasar el ratón */
+      }
+    }
+
+    .external-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .external-link {
+      width: 50px; /* Reducir el tamaño del contenedor del enlace en móviles */
+      height: 50px;
+
+      .external-icon {
+        width: 45px; /* Reducir el tamaño del ícono en móviles */
+        height: 45px;
+      }
+    }
+
+    .image-link-container {
+      justify-content: flex-start; /* Asegura que el enlace esté junto a la imagen */
+      align-items: center; /* Asegura que la imagen y el ícono estén alineados verticalmente */
+    }
+  }
 }
 
 .main-image-container {
@@ -33,7 +86,7 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
   .main-image {
     width: 90px;
     height: auto;
@@ -46,72 +99,25 @@
     color: #fff;
   }
 }
-.image-link-container {
-  display: flex;
-  align-items: flex-end;
-  gap: 10px; // Espacio entre la imagen y el ícono
-
-  .external-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%; // Redondea el ícono
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    &:hover {
-      background-color: #007bff; // Cambia de color al pasar el ratón
-      img {
-        filter: brightness(0) invert(1); // Cambia el color del ícono al pasar el ratón
-      }
-    }
-  }
-
-  .external-icon {
-    width: 25px;
-    height: 25px;
-  }
-}
 
 .details-container {
   display: flex;
+  flex-direction: column; /* Forzar columna para alineación a la izquierda */
   gap: 20px;
+  align-items: flex-start; /* Asegura que todo esté alineado a la izquierda */
+  color: inherit; /* Asegurar que hereda el color blanco del contenedor principal */
 
-  .description, .stack {
-    flex: 1;
-  }
-
-  h2 {
-    font-family: 'Josefin Sans', sans-serif;
-    margin-bottom: 10px;
-    color: #ffffff;
-  }
-
-  p {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ffffff;
-  }
-
-  .stack-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    .pill {
-        font-size: 1.2rem;
-
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+  h2, p {
+    color: inherit; /* Asegurar que los títulos y párrafos heredan el color blanco */
   }
 }
 
 .portfolio-images-container {
   overflow-x: scroll;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
 
   .portfolio-images {
     display: flex;
@@ -125,13 +131,30 @@
     }
   }
 }
+.stack-items {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los items se distribuyan en varias filas si es necesario */
+  gap: 10px; /* Espacio entre los elementos del stack */
+}
+
+.pill {
+  padding: 10px 15px;
+  background-color: #f6f5f5;
+  color: #007bff;
+  border-radius: 50px;
+  box-shadow: none;
+  font-size: 1.2rem;
+  text-align: center;
+}
 
 .popup-footer {
   display: flex;
   justify-content: center;
+  width: 100%;
 
   .close-button {
     background-color: #007bff;
+    margin-bottom: 2rem;
     color: #ffffff;
     padding: 15px 20px;
     border: none;

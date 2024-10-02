@@ -1,20 +1,20 @@
 <div class="showcase-container">
   <h2>Companys I worked for. <span class="divider"></span></h2>
-  <div class="showcase-items">
+  <div class="company-showcase-items">
     <div *ngFor="let item of items" [ngClass]="{'showcase-item': true, 'dark-item': item.dark}" (click)="openPopup(item)">
       <img [src]="item.image" alt="{{ item.name }} logo" class="showcase-logo" />
     </div>
   </div>
-  
+
   <h2>Jobs Showcase. <span class="divider"></span></h2>
-  <div class="showcase-items">
+  <div class="job-showcase-items">
     <div *ngFor="let item of jobs" class="showcase-item" (click)="openPopup(item)">
       <img [src]="item.image" alt="{{ item.name }} logo" class="showcase-logo" />
     </div>
   </div>
-  
+
   <h2>Projects Showcase. <span class="divider"></span></h2>
-  <div class="showcase-items">
+  <div class="project-showcase-items">
     <div *ngFor="let item of projects" class="showcase-item" (click)="openPopup(item)">
       <img [src]="item.image" alt="{{ item.name }} logo" class="showcase-logo" />
     </div>

@@ -1,32 +1,38 @@
 .contact-links-container {
   padding: 20px;
-  background-color: #F4F4F4; 
+  background-color: #F4F4F4;
   height: 80vh;
+
   h2 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 4rem;
     margin-bottom: 1.5rem;
     padding-left: 3rem;
     text-align: left; // Mantener el título alineado a la izquierda
+
     .divider {
-          flex-grow: 1;
-          margin-left: 10px;
-          border-top: 1px solid #333;
-        }
-}
+      flex-grow: 1;
+      margin-left: 10px;
+      border-top: 1px solid #333;
+    }
+  }
+
   .list-wrapper {
     display: flex;
     justify-content: center; // Centrar horizontalmente
     align-items: center; // Centrar verticalmente
     height: 100%; // Tomar el 100% de la altura disponible
+    padding: 0 20px; // Añadir padding horizontal para pantallas pequeñas
   }
+
   ul {
     list-style: none;
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     margin: 4rem auto;
+    padding: 0 20px; /* Padding horizontal añadido */
   }
 
   li {
@@ -48,6 +54,52 @@
 
       &:hover {
         text-decoration: underline;
+      }
+    }
+  }
+
+  /* Media queries para ajustar en pantallas más pequeñas */
+  @media (max-width: 768px) {
+    padding: 20px 10px; /* Reducir el padding en pantallas pequeñas */
+
+    h2 {
+      font-size: 2.5rem; /* Reducir el tamaño del título */
+      padding-left: 1rem; /* Ajustar el padding izquierdo del título */
+    }
+
+    .list-wrapper {
+      padding: 0 15px; /* Asegurar padding horizontal en pantallas pequeñas */
+    }
+
+    ul {
+      margin: 2rem auto;
+      padding: 0 15px; /* Asegurar padding horizontal en pantallas pequeñas */
+    }
+
+    li {
+      a {
+        font-size: 1.2rem; /* Reducir el tamaño de la fuente para enlaces en móviles */
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 2rem; /* Reducir más el tamaño del título en pantallas muy pequeñas */
+      padding-left: 0.5rem;
+    }
+
+    ul {
+      padding: 0 10px; /* Aún más padding horizontal en pantallas pequeñas */
+    }
+
+    li {
+      img {
+        width: 40px; /* Reducir el tamaño de los íconos en móviles */
+      }
+
+      a {
+        font-size: 1rem; /* Reducir el tamaño del texto en móviles */
       }
     }
   }
