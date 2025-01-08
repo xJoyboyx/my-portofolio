@@ -79,13 +79,13 @@ export class ShowcaseComponent {
 
   projects = [
     {
-      name: 'MAI Store',
-      description: 'As a certified prompt engineer, I built a web app that lets users copy and paste the best AI prompts. Users can fine-tune the parameters to get the most out of AI-generated responses.',
+      name: 'AI Command Store',
+      description: 'As a certified prompt engineer, I built a web app that lets users copy, paste and customize the best AI prompts. Users can fine-tune the parameters to get the most out of AI-generated responses.',
       stack: ['NextJS', 'AWS', 'EC2', 'MongoDB', 'Cloudfront', 'Tailwind', 'Jest', 'Express', 'i18n', 'PayloadCMS', 'Google Analytics', 'Facebook Pixel' ],
-      image: 'showcase/MAI.png',
+      image: 'showcase/aicslogo-black.png',
       portfolio_images: [],
       dark: false,
-      url: 'https://maistore.io'
+      url: 'https://aicommandstore.com'
     },
     {
       name: 'Dimensions: Spiral 1',
